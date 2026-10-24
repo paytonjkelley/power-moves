@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#150C0C">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex">
+  <title>Find a Station | Power Moves</title>
+  <meta name="description" content="Explore the Power Moves station finder demo for Dallas–Fort Worth.">
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Montserrat:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../assets/css/stations.css">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script defer src="../assets/js/station-loader.js"></script>
+</head>
+<body class="station-page">
+  <a class="skip-link" href="#station-results">Skip to station list</a>
+  <header class="locator-header">
+    <a class="brand" href="../" aria-label="Power Moves home"><img class="brand-mark" src="../assets/img/pm-monogram.png" alt=""><span class="brand-rule" aria-hidden="true"></span><span class="wordmark" aria-hidden="true"><span class="wm-power">POWER</span><span class="wm-moves">MOVES</span></span></a>
+    <a class="home-link" href="../">← Back to home</a>
+  </header>
+  <main class="locator-main">
+    <div class="locator-intro"><div><p class="eyebrow">POWER, WITHIN REACH</p><h1>A little power.<br><span>A lot more possibility.</span></h1></div><p>Find a place to pick up a power bank or return one when you're done.</p></div>
+    <div class="demo-notice" id="data-notice" role="note"><strong>DEMO PREVIEW</strong><span>Sample locations and availability only. These are not operating Power Moves stations.</span></div>
+    <section class="locator" aria-label="Station finder">
+      <div class="station-panel">
+        <div class="search-panel">
+          <label for="station-search">Where are you headed?</label>
+          <input type="search" id="station-search" placeholder="City, neighborhood, ZIP or station" autocomplete="off" aria-describedby="search-help">
+          <p id="search-help">Search the stations listed in Dallas–Fort Worth.</p>
+          <div class="location-buttons"><button id="locate" type="button">⌖ Use my location</button><button id="clear-location" type="button" hidden>Clear location</button></div>
+          <p class="location-message" id="location-message" role="status">Your location is used only when you request it.</p>
+          <div class="purpose-filters" role="group" aria-label="Station purpose"><button type="button" data-purpose="all" aria-pressed="true">All stations</button><button type="button" data-purpose="rent" aria-pressed="false">Pick up</button><button type="button" data-purpose="return" aria-pressed="false">Return</button></div>
+        </div>
+        <div class="results-heading"><h2 id="result-count" aria-live="polite">Loading stations…</h2><button type="button" id="reset">Reset</button></div>
+        <div id="station-results" class="station-results" tabindex="-1"></div>
+      </div>
+      <div class="map-panel">
+        <div class="map-toolbar"><span id="map-label">DALLAS–FORT WORTH · DEMO MAP</span><button type="button" id="show-all">Fit results</button></div>
+        <div id="map" aria-label="Interactive station map"></div>
+        <p id="map-message" class="map-message" role="status" hidden></p>
+        <div id="station-detail" class="station-detail"><p class="eyebrow">MAKE YOUR NEXT MOVE</p><h2>Choose a station to explore.</h2><p>Select a pin or a station card to see its details.</p></div>
+      </div>
+    </section>
+    <p class="locator-footnote">Availability shown is sample data, not live inventory. Distance, when enabled, is straight-line distance rather than driving distance.</p>
+    <noscript><p class="demo-notice">JavaScript is needed for the interactive map. This preview contains sample locations only.</p></noscript>
+  </main>
+  <footer class="locator-footer"><span>POWER MOVES · Stay connected.</span><a href="../#how-it-works">How it works ↗</a></footer>
+</body>
+</html>

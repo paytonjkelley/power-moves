@@ -1,0 +1,11 @@
+{
+  "demo": true,
+  "stations": [
+    {"id":"demo-arts","name":"Arts District · Demo","area":"Arts District","city":"Dallas","zip":"75201","address":"Illustrative neighborhood pin — not a station address","lat":32.7897,"lng":-96.8008,"status":"online","banks":8,"slots":4},
+    {"id":"demo-ellum","name":"Deep Ellum · Demo","area":"Deep Ellum","city":"Dallas","zip":"75226","address":"Illustrative neighborhood pin — not a station address","lat":32.7843,"lng":-96.783,"status":"online","banks":3,"slots":9},
+    {"id":"demo-bishop","name":"Bishop Arts · Demo","area":"Bishop Arts","city":"Dallas","zip":"75208","address":"Illustrative neighborhood pin — not a station address","lat":32.7498,"lng":-96.828,"status":"online","banks":0,"slots":12},
+    {"id":"demo-arlington","name":"Arlington · Demo","area":"Downtown","city":"Arlington","zip":"76010","address":"Illustrative neighborhood pin — not a station address","lat":32.7357,"lng":-97.1081,"status":"online","banks":12,"slots":0},
+    {"id":"demo-fw","name":"Fort Worth · Demo","area":"Downtown","city":"Fort Worth","zip":"76102","address":"Illustrative neighborhood pin — not a station address","lat":32.7555,"lng":-97.3308,"status":"online","banks":6,"slots":6},
+    {"id":"demo-plano","name":"Plano · Demo","area":"Downtown","city":"Plano","zip":"75074","address":"Illustrative neighborhood pin — not a station address","lat":33.0198,"lng":-96.699,"status":"offline","banks":null,"slots":null}
+  ]
+}
