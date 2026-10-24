@@ -568,3 +568,18 @@ body.menu-open { overflow: hidden; }
   .hero-strip { display: none; }
   .footer-verse { margin-top: 32px; align-items: flex-start; }
 }
+
+
+/* Simplified footer: scripture first, with no separating rules. */
+.site-footer { border-top: 0; }
+.site-footer .footer-verse { margin: 0 0 48px; padding: 0; border: 0; }
+.site-footer .verse-rule { display: none; }
+.site-footer .footer-bottom { border-top: 0; }
+.site-footer .footer-top { grid-template-columns: minmax(180px, 2fr) minmax(0, 7fr); }
+@media (max-width: 1080px) { .site-footer .footer-top { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .site-footer .footer-verse { margin-bottom: 32px; } }
+
+/* Footer identity above the scripture. */
+.site-footer .container > .footer-brand { margin-bottom: 24px; }
+.site-footer .container > .footer-brand .brand { width: fit-content; }
+.site-footer .footer-top { display: block; }
