@@ -164,3 +164,6 @@
 /* Founder identities without unfinished photography. */
 .founder-card { padding: 24px 0; border-top: 1px solid #150c0c25; }
 .ab-hero-photo { display: none; }
+
+/* Matching portrait frames with faces kept in view. */
+.founder-portrait { display:block; width:100%; aspect-ratio:1; object-fit:cover; object-position:center 22%; border-radius:20px; }
