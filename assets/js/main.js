@@ -186,3 +186,4 @@
     track.addEventListener('scroll', function () { window.requestAnimationFrame(updateDots); }, { passive: true });
   }
 })();
+

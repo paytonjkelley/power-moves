@@ -160,3 +160,7 @@
 @media (max-width: 900px) {
   .s5-grid { grid-template-areas: "head" "body"; grid-template-columns: 1fr; gap: 32px; }
 }
+
+/* Founder identities without unfinished photography. */
+.founder-card { padding: 24px 0; border-top: 1px solid #150c0c25; }
+.ab-hero-photo { display: none; }
