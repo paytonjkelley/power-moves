@@ -60,3 +60,9 @@
 @media(max-width:900px) { .locator-intro { display: block; }.locator-intro > p { margin-top: 18px; max-width: 450px; }.locator { grid-template-columns: 320px minmax(0,1fr); }.map-toolbar { padding: 8px 14px; }.map-toolbar span { letter-spacing: 0; font-size: 9px; } }
 @media(max-width:700px) { .locator-header { min-height: 74px; }.locator-header .brand-mark { height: 30px; }.locator-header .brand { gap: 10px; }.locator-header .brand-rule { height: 28px; }.locator-header .wm-moves { font-size: 22px; }.locator-header .wm-power { font-size: 8px; }.home-link { font-size: 11px; }.locator-main { padding-top: 32px; }.demo-notice { align-items: flex-start; flex-direction: column; gap: 5px; }.locator { grid-template-columns: 1fr; }.station-panel { border-right: 0; }.station-results { height: 260px; }#map { height: 340px; }.map-panel { border-top: 1px solid #ffffff22; }.locator-footer { flex-wrap: wrap; } }
 
+
+.locations-coming-soon .station-panel,.locations-coming-soon .demo-notice,.locations-coming-soon .map-toolbar,.locations-coming-soon .station-detail,.locations-coming-soon .locator-footnote {display:none}
+.locations-coming-soon .locator {display:block}
+.locations-coming-soon .map-panel {position:relative;width:100%}
+.map-launch-note {position:absolute;z-index:500;top:50%;left:50%;transform:translate(-50%,-50%);width:min(480px,85%);padding:32px;background:#150c0cf2;border:1px solid var(--neon);border-radius:20px;text-align:center;box-shadow:0 16px 60px #0006;pointer-events:none}
+.map-launch-note strong {display:block;color:var(--neon);font-size:clamp(24px,4vw,38px);line-height:1.2}.map-launch-note span{display:block;color:var(--milk);font-size:14px;line-height:1.6;margin-top:16px}

@@ -583,3 +583,12 @@ body.menu-open { overflow: hidden; }
 .site-footer .container > .footer-brand { margin-bottom: 24px; }
 .site-footer .container > .footer-brand .brand { width: fit-content; }
 .site-footer .footer-top { display: block; }
+
+/* Editorial motion: controllable and reduced-motion aware. */
+.hero-media img {animation:hero-drift 18s ease-in-out infinite alternate; transform-origin:center;}
+@keyframes hero-drift {from{transform:scale(1)}to{transform:scale(1.12) translateX(-1%)}}
+.hero-motion-toggle {position:absolute;z-index:5;right:16px;top:16px;border:1px solid #f6e3cb66;background:#150c0ccc;color:var(--milk);padding:10px 14px;border-radius:30px;font:500 12px var(--sans);cursor:pointer}
+.hero-media.is-paused img {animation-play-state:paused}
+.feature .feature-bg {filter:none;left:0;top:0;width:100%;height:100%;object-position:center 35%;transition:opacity .7s ease;}
+.feature .play {font:600 12px var(--sans);}
+@media(prefers-reduced-motion:reduce){.hero-media img{animation:none}.feature .feature-bg{transition:none}}

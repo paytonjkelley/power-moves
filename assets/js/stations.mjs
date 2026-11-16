@@ -132,6 +132,7 @@ $('#clear-location').addEventListener('click',() => {
 });
 async function start() {
   initMap();
+  if(document.body.classList.contains("locations-coming-soon")) return;
   const controller = new AbortController(), timeout = setTimeout(() => controller.abort(),10000);
   try {
     const response = await fetch('../assets/data/stations.json',{signal:controller.signal});

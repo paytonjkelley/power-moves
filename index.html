@@ -136,6 +136,7 @@
           </div>
         </div>
         <figure class="hero-media">
+          <button class="hero-motion-toggle" type="button" aria-label="Pause hero animation" aria-pressed="false">Pause motion</button>
           <img src="assets/img/concert.jpg" alt="Concertgoers holding up a phone to record a stage glowing with red and gold lights" width="1048" height="769" fetchpriority="high">
           <div class="media-tint" aria-hidden="true"></div>
           <div class="media-fade" aria-hidden="true"></div>
@@ -174,11 +175,11 @@
           <div class="feature-tint" aria-hidden="true"></div>
           <div class="feature-vignette" aria-hidden="true"></div>
           <div class="feature-top">
-            <span class="media-badge">MOTION FEATURE · COMING SOON</span>
+            <span class="media-badge">LIFE, FULLY CHARGED</span>
             <span class="media-ratio">16 : 9</span>
           </div>
           <div class="play-wrap">
-            <button type="button" class="play" data-soon="Power Moves motion feature" aria-label="Play the Power Moves film (coming soon)">
+            <button type="button" class="play" id="motion-toggle" aria-label="Pause motion feature" aria-pressed="false">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M10 7.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg>
             </button>
           </div>
@@ -243,7 +244,6 @@
             <li class="step">
               <div class="step-visual">
                 <div class="panel">
-                  <span class="mock-tag">CONCEPT MOCKUP</span>
                   <div class="stage" role="img" aria-label="A phone showing the Power Moves mobile website with a map of sample station pins">
                     <div aria-hidden="true" style="position: absolute; left: 92px; right: 92px; bottom: 16px; height: 18px; border-radius: 50%; background: rgba(79,8,3,.18); filter: blur(10px)"></div>
                     <div style="position: absolute; left: 97px; top: 30px; width: 211px; height: 428px; border-radius: 36px; background: #1E1312; padding: 7px; box-shadow: 0 30px 60px rgba(79,8,3,.22), 0 6px 16px rgba(21,12,12,.2), inset 0 0 0 1px rgba(200,174,138,.45)">
@@ -272,12 +272,12 @@
                     <div style="position: absolute; top: 276px; left: 10px; right: 10px; display: flex; flex-direction: column; gap: 6px">
                     <div style="height: 36px; border-radius: 10px; background: rgba(246,227,203,.07); display: flex; align-items: center; gap: 9px; padding: 0 10px">
                     <span style="width: 8px; height: 8px; border-radius: 50%; background: #C5D83F; flex: none"></span>
-                    <span style="flex: 1; display: flex; flex-direction: column; gap: 3px"><span style="font: 600 9.5px/1 'Plus Jakarta Sans', sans-serif">Sample Venue A</span><span style="font: 400 8px/1 'Plus Jakarta Sans', sans-serif; color: rgba(246,227,203,.55)">Placeholder location</span></span>
+                    <span style="flex: 1; display: flex; flex-direction: column; gap: 3px"><span style="font: 600 9.5px/1 'Plus Jakarta Sans', sans-serif">Venue A</span><span style="font: 400 8px/1 'Plus Jakarta Sans', sans-serif; color: rgba(246,227,203,.55)">Location preview</span></span>
                     <svg width="8" height="8" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="#C8AE8A" stroke-width="1.6" stroke-linecap="round"></path></svg>
                     </div>
                     <div style="height: 36px; border-radius: 10px; background: rgba(246,227,203,.07); display: flex; align-items: center; gap: 9px; padding: 0 10px">
                     <span style="width: 8px; height: 8px; border-radius: 50%; background: #C5D83F; flex: none"></span>
-                    <span style="flex: 1; display: flex; flex-direction: column; gap: 3px"><span style="font: 600 9.5px/1 'Plus Jakarta Sans', sans-serif">Sample Venue B</span><span style="font: 400 8px/1 'Plus Jakarta Sans', sans-serif; color: rgba(246,227,203,.55)">Placeholder location</span></span>
+                    <span style="flex: 1; display: flex; flex-direction: column; gap: 3px"><span style="font: 600 9.5px/1 'Plus Jakarta Sans', sans-serif">Venue B</span><span style="font: 400 8px/1 'Plus Jakarta Sans', sans-serif; color: rgba(246,227,203,.55)">Location preview</span></span>
                     <svg width="8" height="8" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="#C8AE8A" stroke-width="1.6" stroke-linecap="round"></path></svg>
                     </div>
                     </div>
@@ -295,7 +295,6 @@
             <li class="step">
               <div class="step-visual">
                 <div class="panel">
-                  <span class="mock-tag">CONCEPT MOCKUP</span>
                   <div class="stage" role="img" aria-label="A rental kiosk with one empty slot, and a portable power bank charging a phone away from the kiosk">
                     <div aria-hidden="true" style="position: absolute; left: 30px; width: 150px; bottom: 22px; height: 16px; border-radius: 50%; background: rgba(79,8,3,.2); filter: blur(9px)"></div>
                     <div style="position: absolute; inset: 0">
@@ -341,7 +340,6 @@
             <li class="step">
               <div class="step-visual">
                 <div class="panel">
-                  <span class="mock-tag">CONCEPT MOCKUP</span>
                   <div class="stage" role="img" aria-label="A portable power bank sliding back into an open slot on a Power Moves kiosk">
                     <div aria-hidden="true" style="position: absolute; left: 70px; width: 228px; bottom: 10px; height: 18px; border-radius: 50%; background: rgba(79,8,3,.2); filter: blur(10px)"></div>
                     <div style="position: absolute; inset: 0">
@@ -438,52 +436,46 @@
             <a href="#" class="tile" data-id="arts" data-n="03" data-soon="Arts &amp; Entertainment in the Experiences Hub">
               <img class="tile-photo" src="assets/img/concert.jpg" alt="" loading="lazy">
               <div class="tile-fade" aria-hidden="true"></div>
-              <span class="tile-tag">SAMPLE IMAGE</span>
               <div class="tile-body">
                 <div><div class="tile-num">03</div><div class="tile-title">Arts &amp; Entertainment</div><div class="tile-sub">Live music, performances, festivals and culture.</div></div>
                 <span class="tile-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               </div>
             </a>
             <a href="#" class="tile" data-id="dining" data-n="01" data-soon="Dining in the Experiences Hub">
-              <div class="tile-art art-dining" aria-hidden="true"></div>
+              <img class="tile-photo" src="assets/img/experience-dining.png" alt="" loading="lazy">
               <div class="tile-fade" aria-hidden="true"></div>
-              <span class="tile-tag">PHOTO PLACEHOLDER</span>
               <div class="tile-body">
                 <div><div class="tile-num">01</div><div class="tile-title">Dining</div><div class="tile-sub">Elevated tables, hidden gems and memorable meals.</div></div>
                 <span class="tile-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               </div>
             </a>
             <a href="#" class="tile" data-id="nightlife" data-n="02" data-soon="Nightlife in the Experiences Hub">
-              <div class="tile-art art-nightlife" aria-hidden="true"></div>
+              <img class="tile-photo" src="assets/img/experience-nightlife.png" alt="" loading="lazy">
               <div class="tile-fade" aria-hidden="true"></div>
-              <span class="tile-tag">PHOTO PLACEHOLDER</span>
               <div class="tile-body">
                 <div><div class="tile-num">02</div><div class="tile-title">Nightlife</div><div class="tile-sub">Lounges, social venues and nights worth staying out for.</div></div>
                 <span class="tile-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               </div>
             </a>
             <a href="#" class="tile" data-id="cafes" data-n="04" data-soon="Cafés &amp; Workspaces in the Experiences Hub">
-              <div class="tile-art art-cafes" aria-hidden="true"></div>
+              <img class="tile-photo" src="assets/img/experience-cafes.png" alt="" loading="lazy">
               <div class="tile-fade" aria-hidden="true"></div>
-              <span class="tile-tag">PHOTO PLACEHOLDER</span>
               <div class="tile-body">
                 <div><div class="tile-num">04</div><div class="tile-title">Cafés &amp; Workspaces</div><div class="tile-sub">Good coffee, creative space and room to connect.</div></div>
                 <span class="tile-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               </div>
             </a>
             <a href="#" class="tile" data-id="network" data-n="05" data-soon="Community &amp; Networking in the Experiences Hub">
-              <div class="tile-art art-network" aria-hidden="true"></div>
+              <img class="tile-photo" src="assets/img/experience-network.png" alt="" loading="lazy">
               <div class="tile-fade" aria-hidden="true"></div>
-              <span class="tile-tag">PHOTO PLACEHOLDER</span>
               <div class="tile-body">
                 <div><div class="tile-num">05</div><div class="tile-title">Community &amp; Networking</div><div class="tile-sub">Gatherings, meetups and new connections.</div></div>
                 <span class="tile-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               </div>
             </a>
             <a href="#" class="tile" data-id="wellness" data-n="06" data-soon="Wellness &amp; Lifestyle in the Experiences Hub">
-              <div class="tile-art art-wellness" aria-hidden="true"></div>
+              <img class="tile-photo" src="assets/img/experience-wellness.png" alt="" loading="lazy">
               <div class="tile-fade" aria-hidden="true"></div>
-              <span class="tile-tag">PHOTO PLACEHOLDER</span>
               <div class="tile-body">
                 <div><div class="tile-num">06</div><div class="tile-title">Wellness &amp; Lifestyle</div><div class="tile-sub">Places and activities that keep you balanced.</div></div>
                 <span class="tile-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -584,6 +576,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden><span class="toast-tag">COMING SOON</span><span id="toast-msg"></span></div>
 
+  <script src="assets/js/motion.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
