@@ -592,3 +592,8 @@ body.menu-open { overflow: hidden; }
 .feature .feature-bg {filter:none;left:0;top:0;width:100%;height:100%;object-position:center 35%;transition:opacity .7s ease;}
 .feature .play {font:600 12px var(--sans);}
 @media(prefers-reduced-motion:reduce){.hero-media img{animation:none}.feature .feature-bg{transition:none}}
+
+.feature-video video {display:block;width:100%;height:100%;object-fit:contain;background:#150c0c;}
+
+.feature.feature-video {aspect-ratio:auto;height:auto;overflow:visible;background:transparent;}
+.feature.feature-video video {display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:14px;background:#150c0c;}

@@ -8,4 +8,4 @@ Contact and prayer requests submit directly to FormSubmit at https://formsubmit.
 
 Still awaiting final content: real station locations, experience destinations, founder biographies, privacy policy, terms, and accessibility statement. Existing coming-soon links remain clearly indicated when clicked. Map tiles and fonts require internet access. Preview the map through a web server or GitHub Pages, not a file URL.
 
-Homepage cleanup: original How It Works visuals retained, concept labels removed, Venue A/B names, five approved AI-generated experience photos, map launch notice without demo pins, controllable hero motion and an animated photo sequence. Motion respects reduced-motion preferences. Founder photos and FormSubmit configuration are included.
+Homepage cleanup: original How It Works visuals retained, concept labels removed, Venue A/B names, five approved AI-generated experience photos, map launch notice without demo pins, controllable hero motion and the supplied 15-second video ad. Motion respects reduced-motion preferences. Founder photos and FormSubmit configuration are included.
