@@ -597,3 +597,8 @@ body.menu-open { overflow: hidden; }
 
 .feature.feature-video {aspect-ratio:auto;height:auto;overflow:visible;background:transparent;}
 .feature.feature-video video {display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:14px;background:#150c0c;}
+
+/* The opening hero photograph is static. */
+.hero-media img {animation:none;transform:none;}
+
+.video-start {position:absolute;inset:0;margin:auto;width:150px;height:52px;border:0;border-radius:30px;background:var(--neon);color:var(--espresso);font:600 15px var(--sans);cursor:pointer;z-index:2}.video-start[hidden]{display:none}
